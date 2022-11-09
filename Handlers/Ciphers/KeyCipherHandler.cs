@@ -16,7 +16,7 @@ public class KeyCipherHandler : IKeyCipherHandler
         var withXor = reverseAndLeftShift.Select(x => (byte)(x.Item1 ^ x.Item2)).ToArray();
         
         var reverseAndXor = reverseKey.Zip(withXor, (x, y) => new Tuple<byte, byte>(x, y)).ToArray();
-        var leftShiftAndXorReverse = keyWithLeftShift.Zip(withXor.Reverse(), (x, y) => new Tuple<byte, byte>(x, y)).ToArray();
+        var leftShiftAndXorReverse = withXor.Zip(keyWithLeftShift.Reverse(), (x, y) => new Tuple<byte, byte>(x, y)).ToArray();
 
         var combination1 = JoinValues(reverseAndXor);
         var combination2 = JoinValues(leftShiftAndXorReverse);

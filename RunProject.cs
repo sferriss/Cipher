@@ -16,11 +16,9 @@ public class RunProject
 
     public void Run()
     {
-        var option = Console.ReadLine();
+        var option = "";
         
-        _cipherHandler.Encode(new byte[]{}, option);
-        
-        /*while (option != "2")
+        while (option != "2")
         {
             option = CallMainMenu();
 
@@ -107,7 +105,7 @@ public class RunProject
                     Console.WriteLine("Opção inválida! \n");
                     break;
             }
-        }*/
+        }
     }
     
     private static string? CallMainMenu()
