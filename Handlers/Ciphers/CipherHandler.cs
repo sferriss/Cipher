@@ -17,6 +17,9 @@ public class CipherHandler : ICipherHandler
     public void Encode(byte[] bytes, string key)
     {
         var subkeys = _keyCipherHandler.GetSubKeys(key);
+
+        //corpo do cifrador em bloco
+
         throw new NotImplementedException();
     }
 
