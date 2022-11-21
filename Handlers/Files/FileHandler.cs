@@ -14,6 +14,6 @@ public class FileHandler : IFileHandler
         File.WriteAllBytes(
             OperationType.Decode == type
                 ? @$"..\..\..\ReturnedFiles\Decoded\decode.txt"
-                : @"..\..\..\ReturnedFiles\Encoded\decode.txt", bytes);
+                : @"..\..\..\ReturnedFiles\Encoded\encoded.txt", bytes);
     }
 }
